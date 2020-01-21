@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_persistencia/screens/contact_form.dart';
 import 'package:flutter_persistencia/screens/contacts_list.dart';
 import 'package:flutter_persistencia/screens/dashboard.dart';
+import 'database/app_database.dart';
+import 'models/contact.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+  // save(Contact(2, 'alex', 2000)).then((id) {
+  //   findAll().then((contacts) => debugPrint(contacts.toString()));
+  // });
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

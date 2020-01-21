@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_persistencia/database/app_database.dart';
 import 'package:flutter_persistencia/models/contact.dart';
 
 class ContactForm extends StatefulWidget {
@@ -46,7 +47,8 @@ class _ContactFormState extends State<ContactForm> {
                         final int accountNumber =
                             int.tryParse(_accountNumberController.text);
                         final contact = new Contact(0, name, accountNumber);
-                        Navigator.pop(context, contact);
+                        save(contact);
+                        Navigator.pop(context);
                       },
                     )),
               )
